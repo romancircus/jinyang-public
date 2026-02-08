@@ -98,21 +98,6 @@ export default function StandingOnGiants() {
           </div>
         </div>
 
-        {/* Clarification */}
-        <div className="max-w-3xl mx-auto text-center">
-          <div className="p-6 bg-white rounded-xl border border-gray-200 shadow-sm">
-            <h4 className="text-lg font-bold text-gray-900 mb-3">
-              Built on a Solid Foundation
-            </h4>
-            <p className="text-gray-600 leading-relaxed">
-              Three technical breakthroughs = theirs. 88-agent scaling = mine.
-              Git worktrees perfect for parallel execution, Linear webhooks perfect for real-time sync,
-              autonomous execution perfect for no-human coding. I take perfect foundation, I make perfecter for you.
-              Thank you to original team for Apache 2.0 gift. I build on proven foundation, I build empire for open source.
-            </p>
-          </div>
-        </div>
-
         {/* GitHub Links */}
         <div className="flex flex-wrap justify-center gap-4 mt-12">
           <a

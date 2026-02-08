@@ -1,14 +1,14 @@
 'use client';
 
-import Header from '../components/Header';
-import Hero from '../components/Hero';
-import PartnerLogos from '../components/PartnerLogos';
-import Features from '../components/Features';
-import HowItWorks from '../components/HowItWorks';
-import MemeQuotes from '../components/MemeQuotes';
-import Pricing from '../components/Pricing';
-import StandingOnGiants from '../components/StandingOnGiants';
-import Footer from '../components/Footer';
+import Header from '@/components/Header';
+import Hero from '@/components/Hero';
+import PartnerLogos from '@/components/PartnerLogos';
+import Features from '@/components/Features';
+import HowItWorks from '@/components/HowItWorks';
+import MemeQuotes from '@/components/MemeQuotes';
+import Pricing from '@/components/Pricing';
+import StandingOnGiants from '@/components/StandingOnGiants';
+import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
