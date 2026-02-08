@@ -9,6 +9,8 @@ export default function Hero() {
 
   useEffect(() => {
     const timer = setTimeout(() => {
+      if (typeof window === 'undefined') return;
+      
       const isDesktop = window.innerWidth >= 1024;
       const connection = (navigator as Navigator & { connection?: { effectiveType?: string } }).connection;
       const isFastConnection = connection?.effectiveType === '4g';
