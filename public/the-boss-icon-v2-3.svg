@@ -1,0 +1,61 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+      <linearGradient id="sweater" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color:#fef3c7;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#fde68a;stop-opacity:1" />
+      </linearGradient>
+  </defs>
+  
+  <circle cx="50" cy="50" r="48" fill="#171717" stroke="#22c55e" stroke-width="2"/>
+  
+  <!-- Sweater Torso -->
+  <path d="M20,100 L20,70 Q20,60 30,60 L70,60 Q80,60 80,70 L80,100 Z" fill="url(#sweater)"/>
+  <!-- Sweater Stripes -->
+  <path d="M22,75 L78,75" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="4,2"/>
+  
+  <!-- Neck -->
+  <rect x="42" y="55" width="16" height="10" fill="#f0d5be"/>
+  
+  <!-- Face -->
+  <path d="M32,25 
+           L32,50 
+           Q32,70 50,75 
+           Q68,70 68,50 
+           L68,25 Z" 
+        fill="#f0d5be"/>
+        
+  <!-- Hair: Messy Center Part -->
+  <!-- Top -->
+  <path d="M30,25 
+           C30,10 40,5 50,5 
+           C60,5 70,10 70,25
+           L72,45
+           Q75,50 70,55
+           L68,45
+           L68,25
+           C68,25 60,18 50,18
+           C40,18 32,25 32,25
+           L32,45
+           L30,55
+           Q25,50 28,45
+           Z" fill="#000"/>
+           
+  <!-- Glasses -->
+  <g transform="translate(0, -2)">
+    <rect x="35" y="38" width="12" height="7" rx="1" fill="#000" fill-opacity="0.8" stroke="#000" stroke-width="1"/>
+    <rect x="53" y="38" width="12" height="7" rx="1" fill="#000" fill-opacity="0.8" stroke="#000" stroke-width="1"/>
+    <line x1="47" y1="41" x2="53" y2="41" stroke="#000" stroke-width="1.5"/>
+  </g>
+  
+  <!-- Smirk -->
+  <path d="M45,60 Q50,62 55,59" fill="none" stroke="#000" stroke-width="1"/>
+  
+  <!-- Hand + Cigarette -->
+  <circle cx="70" cy="65" r="5" fill="#f0d5be"/>
+  <line x1="70" y1="65" x2="85" y2="55" stroke="#fff" stroke-width="2"/>
+  <circle cx="85" cy="55" r="1" fill="red"/>
+  
+  <!-- Smoke -->
+  <path d="M86,54 Q90,40 85,30" fill="none" stroke="#ccc" stroke-width="1.5" stroke-opacity="0.7"/>
+
+</svg>

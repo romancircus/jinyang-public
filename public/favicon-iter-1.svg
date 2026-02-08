@@ -1,0 +1,31 @@
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#1a1a1a"/>
+  
+  <!-- Face -->
+  <path d="M9,12 L9,25 Q16,29 23,25 L23,12" fill="#f0d5be"/>
+  
+  <!-- Hair: Iteration 1 - Longer "Curtain" Style -->
+  <!-- Back/Top -->
+  <path d="M8,22 
+           L8,10 
+           Q16,2 24,10 
+           L24,22 
+           L22,22 
+           Q22,12 16,12  
+           Q10,12 10,22 
+           Z" fill="#171717"/>
+           
+  <!-- Glasses -->
+  <g transform="translate(0, 1)">
+    <rect x="10" y="16" width="5" height="3" fill="#000"/>
+    <rect x="17" y="16" width="5" height="3" fill="#000"/>
+    <line x1="15" y1="17" x2="17" y2="17" stroke="#000" stroke-width="1"/>
+  </g>
+  
+  <!-- Cigarette -->
+  <line x1="19" y1="26" x2="26" y2="22" stroke="#fff" stroke-width="1.5"/>
+  <circle cx="26" cy="22" r="0.8" fill="#ef4444"/>
+  
+  <!-- Green Accent -->
+  <circle cx="27" cy="27" r="1.5" fill="#22c55e"/>
+</svg>

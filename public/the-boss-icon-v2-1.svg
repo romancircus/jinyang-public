@@ -1,0 +1,57 @@
+<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="2" stdDeviation="2" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="#f5f5f5" stroke="#22c55e" stroke-width="4"/>
+  
+  <!-- Hair: Dark, center part, M-shape bangs, slightly messy, covering ears -->
+  <path d="M25,35 
+           C25,20 35,10 50,10 
+           C65,10 75,20 75,35 
+           L78,55 
+           Q80,60 75,65 
+           L72,55 
+           L72,45 
+           C72,45 60,35 50,35 
+           C40,35 28,45 28,45 
+           L28,55 
+           L25,65 
+           Q20,60 22,55 
+           Z" 
+        fill="#1a1a1a" />
+        
+  <!-- Face Shape (Jawline) -->
+  <path d="M28,45 
+           L28,60 
+           Q28,75 50,85 
+           Q72,75 72,60 
+           L72,45" 
+        fill="#f0d5be" stroke="none"/>
+  
+  <!-- Glasses: Rectangular, thick black frames -->
+  <g transform="translate(0, 5)">
+      <rect x="30" y="42" width="16" height="8" rx="1" fill="none" stroke="#000" stroke-width="2.5"/>
+      <rect x="54" y="42" width="16" height="8" rx="1" fill="none" stroke="#000" stroke-width="2.5"/>
+      <line x1="46" y1="46" x2="54" y2="46" stroke="#000" stroke-width="2.5"/> <!-- Bridge -->
+      <line x1="28" y1="44" x2="30" y2="44" stroke="#000" stroke-width="2"/> <!-- Left arm start -->
+      <line x1="70" y1="44" x2="72" y2="44" stroke="#000" stroke-width="2"/> <!-- Right arm start -->
+  </g>
+
+  <!-- Mouth: Smirk -->
+  <path d="M42,70 Q50,73 58,68" fill="none" stroke="#1a1a1a" stroke-width="1.5" stroke-linecap="round"/>
+
+  <!-- Cigarette -->
+  <path d="M60,75 L80,70" stroke="#fff" stroke-width="3" stroke-linecap="round"/> <!-- Cigarette stick -->
+  <path d="M78,70.5 L80,70" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/> <!-- Cherry -->
+  
+  <!-- Hand holding cigarette -->
+  <circle cx="60" cy="78" r="6" fill="#f0d5be"/>
+  
+  <!-- Smoke -->
+  <path d="M82,68 Q85,60 82,55 T85,45" fill="none" stroke="#aaa" stroke-width="2" stroke-opacity="0.6" stroke-dasharray="2,2"/>
+  
+</svg>

@@ -1,0 +1,59 @@
+import React from 'react';
+
+// Improved Jin Yang Favicon (Iteration 3 - Asymmetric Curtain)
+export default function JinyangFavicon() {
+  return (
+    <svg 
+      viewBox="0 0 32 32" 
+      xmlns="http://www.w3.org/2000/svg"
+      style={{ background: 'transparent' }}
+    >
+      <rect width="32" height="32" rx="6" fill="#111"/>
+  
+      {/* Face */}
+      <path d="M10,13 L10,24 Q16,27 22,24 L22,13" fill="#f0d5be"/>
+      
+      {/* Hair: Asymmetric Curtain */}
+      <path d="M9,22 
+               C9,15 10,6 16,6 
+               C22,6 23,15 23,22 
+               L22,23 
+               L21,16 
+               C21,16 19,13 16,13 
+               C13,13 11,16 11,16 
+               L10,23 
+               Z" fill="#000"/>
+               
+      {/* Glasses */}
+      <rect x="11" y="17" width="4" height="2" fill="#000"/>
+      <rect x="17" y="17" width="4" height="2" fill="#000"/>
+      <line x1="15" y1="18" x2="17" y2="18" stroke="#000" strokeWidth="1"/>
+      
+      {/* Mouth/Smirk */}
+      <path d="M14,23 Q16,24 18,23" fill="none" stroke="#000" strokeWidth="0.5"/>
+      
+      {/* Cigarette */}
+      <line x1="18" y1="23" x2="25" y2="21" stroke="#fff" strokeWidth="1.2"/>
+      <circle cx="25" cy="21" r="0.6" fill="#ef4444"/>
+      
+      {/* Green Dot */}
+      <circle cx="27" cy="27" r="1.5" fill="#22c55e"/>
+    </svg>
+  );
+}
+
+// For actual favicon.ico/png generation
+export const faviconSvgString = `
+<svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <rect width="32" height="32" rx="6" fill="#111"/>
+  <path d="M10,13 L10,24 Q16,27 22,24 L22,13" fill="#f0d5be"/>
+  <path d="M9,22 C9,15 10,6 16,6 C22,6 23,15 23,22 L22,23 L21,16 C21,16 19,13 16,13 C13,13 11,16 11,16 L10,23 Z" fill="#000"/>
+  <rect x="11" y="17" width="4" height="2" fill="#000"/>
+  <rect x="17" y="17" width="4" height="2" fill="#000"/>
+  <line x1="15" y1="18" x2="17" y2="18" stroke="#000" stroke-width="1"/>
+  <path d="M14,23 Q16,24 18,23" fill="none" stroke="#000" stroke-width="0.5"/>
+  <line x1="18" y1="23" x2="25" y2="21" stroke="#fff" stroke-width="1.2"/>
+  <circle cx="25" cy="21" r="0.6" fill="#ef4444"/>
+  <circle cx="27" cy="27" r="1.5" fill="#22c55e"/>
+</svg>
+`;

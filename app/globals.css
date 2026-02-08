@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --color-jianyang: #00FF41;
+}
+
+/* Force light mode variables, ignoring system preference for now as per design review */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: #171717;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  position: relative;
+  min-height: 100vh;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/jian-yang-wallpaper.png');
+  background-repeat: repeat;
+  background-size: 300px; /* Subtle repeat */
+  opacity: 0.08; /* ~5-10% opacity */
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Light mode CRT Scanline Utility */
+.crt-scanline {
+  background-image: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(34, 197, 94, 0.05) 2px,
+    rgba(34, 197, 94, 0.05) 4px
+  );
+  pointer-events: none;
+}
+
+/* Matrix/Sweatshop Background Patterns */
+.bg-matrix-subtle {
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+}
+
+.bg-matrix-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+.bg-matrix-dots {
+  background-image: radial-gradient(circle at 2px 2px, rgba(0, 255, 65, 0.08) 1px, transparent 0);
+  background-size: 40px 40px;
+}
+
+.bg-sweatshop-pattern {
+  background-image: 
+    linear-gradient(rgba(0, 255, 65, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 65, 0.04) 1px, transparent 1px),
+    radial-gradient(circle at 25% 25%, rgba(0, 255, 65, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(0, 255, 65, 0.02) 0%, transparent 50%);
+  background-size: 40px 40px, 40px 40px, 100px 100px, 100px 100px;
+}

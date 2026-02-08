@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#000000"/>
+  
+  <!-- CRT scanlines -->
+  <defs>
+    <pattern id="scanlines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
+      <rect x="0" y="0" width="1" height="2" fill="#000000" opacity="0.3"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#scanlines)"/>
+  
+  <!-- Main Jinyang figure -->
+  <g transform="translate(600, 315)">
+    <!-- Glow effect -->
+    <defs>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+        <feMerge>
+          <feMergeNode in="coloredBlur"/>
+          <feMergeNode in="SourceGraphic"/>
+        </feMerge>
+      </filter>
+    </defs>
+    
+    <!-- Head -->
+    <ellipse cx="0" cy="-80" rx="100" ry="110" fill="#22c55e" opacity="0.8" filter="url(#glow)"/>
+    
+    <!-- Hair -->
+    <path d="M -90 -100 Q -50 -140 0 -140 Q 50 -140 90 -100 L 90 -130 Q 50 -160 0 -160 Q -50 -160 -90 -130 Z" 
+          fill="#22c55e" opacity="0.9"/>
+    
+    <!-- Glasses -->
+    <rect x="-70" y="-90" width="50" height="35" rx="5" fill="#000000" stroke="#22c55e" stroke-width="3"/>
+    <rect x="20" y="-90" width="50" height="35" rx="5" fill="#000000" stroke="#22c55e" stroke-width="3"/>
+    <line x1="-20" y1="-72" x2="20" y2="-72" stroke="#22c55e" stroke-width="3"/>
+    
+    <!-- Body -->
+    <path d="M -80 30 L -100 200 L -100 300 L 100 300 L 100 200 L 80 30 Z" 
+          fill="#22c55e" opacity="0.7"/>
+    
+    <!-- Arm holding cigarette -->
+    <path d="M -100 180 L -140 250" stroke="#22c55e" stroke-width="15" stroke-linecap="round" fill="none"/>
+    <circle cx="-140" cy="250" r="20" fill="#22c55e" opacity="0.9"/>
+    
+    <!-- Cigarette -->
+    <rect x="-160" y="240" width="60" height="8" transform="rotate(-20 -140 250)" fill="#94a3b8"/>
+    <circle cx="-130" cy="235" r="6" fill="#ef4444">
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="1s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- Smoke -->
+    <circle cx="-115" cy="220" r="15" fill="#22c55e" opacity="0.4">
+      <animate attributeName="cy" values="220;180;140" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.2;0" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-110" cy="210" r="12" fill="#22c55e" opacity="0.3">
+      <animate attributeName="cy" values="210;170;130" dur="3s" begin="1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.15;0" dur="3s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <!-- Text -->
+  <text x="600" y="520" text-anchor="middle" font-family="monospace" font-size="48" fill="#22c55e" font-weight="bold" filter="url(#glow)">
+    JINYANG.AI
+  </text>
+  <text x="600" y="570" text-anchor="middle" font-family="monospace" font-size="24" fill="#22c55e" opacity="0.8">
+    Open Source, Mother Fuckers!
+  </text>
+  
+  <!-- Decorative elements -->
+  <text x="50" y="50" font-family="monospace" font-size="14" fill="#22c55e" opacity="0.5">
+    27 PARALLEL AGENTS // $0 FOREVER
+  </text>
+  <text x="50" y="70" font-family="monospace" font-size="14" fill="#22c55e" opacity="0.5">
+    KIMI K2.5 // GLM 4.7 // OPENCODE // LINEAR
+  </text>
+</svg>
