@@ -16,6 +16,21 @@ repos:
         language: python
         stages: [commit-msg]
 
+      - id: check-critical-files
+        name: Protect critical config files
+        entry: python scripts/precommit_landing_hooks.py check-critical-files
+        language: python
+        always_run: true
+        pass_filenames: false
+        stages: [pre-commit]
+
+      - id: check-next-config-safety
+        name: Block ignoreBuildErrors
+        entry: python scripts/precommit_landing_hooks.py check-next-config-safety
+        language: python
+        files: next\.config\.ts
+        stages: [pre-commit]
+
   # Standard Python linting
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.1.9
