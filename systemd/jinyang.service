@@ -1,0 +1,18 @@
+[Unit]
+Description=jinyang Linear Agent
+After=network.target tailscaled.service
+
+[Service]
+Type=simple
+User=%u
+WorkingDirectory=%h/Applications/jinyang
+Environment=PATH=%h/.local/share/mise/installs/node/22.21.1/bin:/usr/local/bin:/usr/bin:/bin
+Environment=HOME=%h
+Environment=NODE_ENV=production
+EnvironmentFile=%h/Applications/jinyang/.env
+ExecStart=%h/.local/share/mise/installs/node/22.21.1/bin/node dist/src/index.js
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

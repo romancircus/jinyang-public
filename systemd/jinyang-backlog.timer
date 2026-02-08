@@ -1,0 +1,10 @@
+[Unit]
+Description=Backlog Processor Timer - 15-min interval
+
+[Timer]
+OnCalendar=*:0/15
+Persistent=true
+AccuracySec=1m
+
+[Install]
+WantedBy=timers.target

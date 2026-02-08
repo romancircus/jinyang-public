@@ -1,0 +1,42 @@
+providers:
+  opencode-glm47:
+    credential_env: OPENCODE_API_KEY
+    base_url: https://opencode.ai/zen/v1
+    priority: 1
+    health_check_endpoint: /health
+    models:
+      primary: glm-4.7
+      fallback: kimi-k2.5
+
+  claude-code:
+    credential_env: CLAUDE_CODE_ACCESS_TOKEN
+    base_url: https://api.anthropic.com
+    priority: 2
+    health_check_endpoint: /v1/models
+    models:
+      primary: claude-sonnet-4-opus
+      fallback: claude-sonnet-4-sonnet
+
+  claude-code-api:
+    credential_env: CLAUDE_CODE_API_KEY
+    base_url: https://api.anthropic.com
+    priority: 3
+    health_check_endpoint: /v1/models
+    models:
+      primary: claude-sonnet-4-opus
+
+routing:
+  strategy: tiered
+  default_provider: opencode-glm47
+  fallback_chain:
+    - opencode-glm47
+    - claude-code
+    - claude-code-api
+
+circuit_breaker:
+  failure_threshold: 3
+  sleep_window_minutes: 5
+
+notifications:
+  on_fallback: true
+  on_rate_limit: true

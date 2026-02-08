@@ -1,0 +1,14 @@
+[Unit]
+Description=jinyang Provider Health Daemon
+After=network.target
+
+[Service]
+Type=simple
+User=%u
+WorkingDirectory=%h/Applications/jinyang
+ExecStart=%h/Applications/jinyang/scripts/health-daemon.sh
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
