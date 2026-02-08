@@ -24,5 +24,5 @@
     ".next/dev/types/**/*.ts",
     "**/*.mts"
   ],
-  "exclude": ["node_modules", "src"]
+  "exclude": ["node_modules", "src", "dist", "lib", "tests", "test", "scripts", "templates", "types", "systemd", "vitest.config.ts", "test-e2e.mjs", "test-webhook.mjs", "eslint.config.js"]
 }
